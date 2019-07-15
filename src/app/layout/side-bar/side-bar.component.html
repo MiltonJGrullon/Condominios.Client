@@ -1,0 +1,118 @@
+<div class="page-sidebar" id="sidebar">
+  <div id="sidebar-collapse">
+    <ul class="side-menu metismenu">
+      <li routerLinkActive="active">
+        <a href="href=&quot;javascript:;&quot;">
+          <i class="sidebar-item-icon ti-view-grid"></i>
+          <span class="nav-label">Dashboards</span>
+          <i class="fa fa-angle-left arrow"></i>
+        </a>
+        <ul class="nav-2-level collapse" routerLinkActive="in">
+          <li>
+            <a routerLinkActive="active" routerLink="/index">Visitors</a>
+          </li>
+          <li>
+            <a routerLink="/ecommerce/dashboard" routerLinkActive="active">Shop</a>
+          </li>
+          <li>
+            <a routerLink="/dashboard_blog" routerLinkActive="active">Blog</a>
+          </li>
+          <li>
+            <a routerLink="/dashboard_4" routerLinkActive="active">Dashboard v4</a>
+          </li>
+          <li>
+            <a routerLink="/dashboard_5" routerLinkActive="active">Dashboard v5</a>
+          </li>
+          <li>
+            <a routerLink="/dashboard_6" routerLinkActive="active">Dashboard v6</a>
+          </li>
+          <li>
+            <a routerLink="/dashboard_7" routerLinkActive="active">Dashboard v7</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="heading">SEGURIDAD</li>      
+      <li>
+        <a routerLink="/app/roles" routerLinkActive="active">
+          <i class="sidebar-item-icon ti-layout-grid2"></i>
+          <span class="nav-label">Roles</span>
+        </a>
+      </li>
+      
+      <li>
+          <a routerLink="/app/users" routerLinkActive="active">
+            <i class="sidebar-item-icon ti-user"></i>
+            <span class="nav-label">Usuarios</span>
+          </a>
+      </li>
+      <li class="heading">MODULO DE GENERALES</li>  
+
+        <li routerLinkActive="active">
+          <a href="href=&quot;javascript:;&quot;">
+            <i class="sidebar-item-icon ti-view-grid"></i>
+            <span class="nav-label">Registros</span>
+            <i class="fa fa-angle-left arrow"></i>
+          </a>
+
+          <ul class="nav-2-level collapse" routerLinkActive="in">
+            <li>
+              <a routerLink="/app/generales/pais" routerLinkActive="active">Pais</a>              
+            </li>
+            <li>
+              <a routerLink="/app/generales/provincia" routerLinkActive="active">Provincia</a>              
+            </li>
+            <li>
+              <a routerLink="/app/generales/municipio" routerLinkActive="active">Municipio</a>              
+            </li>
+            <li>
+                <a routerLink="/app/generales/sector" routerLinkActive="active">Sector</a>              
+            </li>
+            <li>
+              <a routerLink="/app/generales/tipo-telefono" routerLinkActive="active">Tipo de teléfono</a>              
+            </li>
+            <li>
+                <a routerLink="/app/generales/tipo-direccion" routerLinkActive="active">Tipo de dirección</a>              
+              </li>
+          </ul>
+        </li>
+
+        <li class="heading">MODULO DE INSCRIPCION</li>  
+
+        <li routerLinkActive="active">
+          <a href="href=&quot;javascript:;&quot;">
+            <i class="sidebar-item-icon ti-view-grid"></i>
+            <span class="nav-label">Registros</span>
+            <i class="fa fa-angle-left arrow"></i>
+          </a>
+  
+          <ul class="nav-2-level collapse" routerLinkActive="in">
+            <li>
+              <a routerLink="/app/inscripcion/estudiante" routerLinkActive="active">Estudiante</a>              
+            </li>            
+            <li>
+                <a routerLink="/app/inscripcion/grupo" routerLinkActive="active">Grupos</a>              
+            </li>
+          </ul>
+    </ul>
+    
+  
+    <div class="sidebar-footer">
+      <a href="javascript:;">
+        <i class="ti-announcement"></i>
+      </a>
+      <a routerLink="/calendar">
+        <i class="ti-calendar"></i>
+      </a>
+      <a routerLink="/mailbox">
+        <i class="ti-comments"></i>
+      </a>
+      <a (click)="logout()">
+        <i class="ti-power-off"></i>
+      </a>
+    </div>
+  </div>
+
+
+
+</div>

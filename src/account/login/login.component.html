@@ -1,0 +1,75 @@
+﻿<div class="overlay"></div>
+<div class="cover"></div>
+
+<div class="inbox login-content">   
+    <div class="ibox m-4" style="box-shadow: none;">
+      
+      <div class="text-center">
+          <span class="auth-head-icon">
+            <i class="la la-user"></i>
+          </span>
+      </div>
+        
+      <form class="ibox-body"  #formLogin="ngForm" id="login-form" action="javascript:;" method="POST" novalidate (ngSubmit)="login(formLogin)">
+          <h4 class="font-strong text-center mb-5">{{l("Ingresar")}}</h4>
+
+          <div class="form-group mb-4">
+            <input 
+                class="form-control form-control-inline no-shadow" 
+                [(ngModel)]="loginService.authenticateModel.userNameOrEmailAddress" 
+                type="text" 
+                placeholder="{{l('Usuario o email')}}" 
+                name="userNameOrEmailAddress" 
+                id="userNameOrEmailAddress" 
+                required
+                #name="ngModel" 
+                maxlength="255" 
+                autofocus>
+                <app-input-validation [input]="name"></app-input-validation>   
+          </div>
+
+          <div class="form-group mb-4">
+            <input 
+                type="password" 
+                [(ngModel)]="loginService.authenticateModel.password" 
+                class="form-control form-control-inline no-shadow" 
+                name="password" 
+                placeholder="{{l('Contraseña')}}" 
+                required
+                #password="ngModel" 
+                maxlength="32">
+                <app-input-validation [input]="password"></app-input-validation>   
+          </div>
+
+          <div class="form-group mb-4">
+              <label for ="rememberme" class="checkbox checkbox-primary">
+                  <input 
+                    type="checkbox"  
+                    [(ngModel)]="loginService.rememberMe" 
+                    name="rememberMe" 
+                    id="rememberme" 
+                    checked>
+                    <span class="input-span"></span> Recordarme
+                </label>            
+          </div>
+
+          <div class="form-group mb-4">
+            <button 
+                id="LoginButton" 
+                class="btn btn-primary btn-rounded btn-block btn-air" 
+                type="submit">{{l("Ingresar")}}
+            </button>
+          </div>
+
+          <div class="text-center" *ngIf="isSelfRegistrationAllowed">
+              <div class="col-xs-12">
+                <p>{{l("¿Aún no eres usuario? ")}} <a [routerLink]="['../register']">{{l("Regístrate")}}</a> </p>
+              </div>
+          </div>
+      </form>
+    </div>
+</div>
+
+
+
+
